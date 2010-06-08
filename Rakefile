@@ -1,23 +1,31 @@
-require 'rake'
+# require "mg"
+# 
+# MG.new("openfooty.gemspec")
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "openfooty"
+    gem.summary = %Q{Ruby wrapper for the Openfooty API}
+    gem.description = %Q{Ruby wrapper for the Openfooy API}
+    gem.email = "johnnyn@gmail.com"
+    gem.homepage = "http://github.com/phuphighter/openfooty"
+    gem.authors = ["Johnny Khai Nguyen"]
+    
+    gem.add_dependency('httparty', '>= 0.5.0')
+    gem.add_dependency('hashie', '>= 0.1.3')
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+end
+
 require 'rake/testtask'
-require 'rake/rdoctask'
+Rake::TestTask.new(:test) do |test|
+  test.ruby_opts = ['-rubygems'] if defined? Gem
+  test.libs << 'lib' << 'test'
+  test.pattern = 'test/**/*_test.rb'
+end
 
-desc 'Default: run unit tests.'
+desc "Run tests"
 task :default => :test
-
-desc 'Test the openfooty plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
-end
-
-desc 'Generate documentation for the openfooty plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'Openfooty'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end

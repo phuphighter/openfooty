@@ -1,8 +1,11 @@
 # Openfooty
 gem 'httparty'
 require 'httparty'
+require 'hashie'
 
 directory = File.expand_path(File.dirname(__FILE__))
+
+Hash.send :include, Hashie::HashExtensions
 
 module Openfooty
   
@@ -10,14 +13,12 @@ module Openfooty
   # 
   # Openfooty.configure do |config|
   #   config.api_key = 'api_key'
-  #   config.api_type = 'api_type'
   # end
   # client = Openfooty::Client.new
   #
   # or
   #
   # Openfooty.api_key = 'api_key'
-  # Openfooty.api_type = 'api_type'
   #
   # or
   #
@@ -30,17 +31,8 @@ module Openfooty
 
   class << self
     attr_accessor :api_key
-    attr_accessor :api_type
   end
   
 end
 
-require File.join(directory, 'openfooty', 'auth')
-require File.join(directory, 'openfooty', 'betting')
-require File.join(directory, 'openfooty', 'channel')
-require File.join(directory, 'openfooty', 'community')
-require File.join(directory, 'openfooty', 'league')
-require File.join(directory, 'openfooty', 'match')
-require File.join(directory, 'openfooty', 'player')
-require File.join(directory, 'openfooty', 'team')
-require File.join(directory, 'openfooty', 'video')
+require File.join(directory, 'openfooty', 'client')
