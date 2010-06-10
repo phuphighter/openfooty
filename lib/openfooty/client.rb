@@ -3,7 +3,7 @@ module Openfooty
   class Client
     include HTTParty
     base_uri "http://api.openfooty.org/1.0"
-    format :json
+    format :xml
   
     attr_reader :api_key
   
@@ -57,7 +57,7 @@ module Openfooty
     protected
   
     def default_options
-      {:api_key => @api_key, :format => :json}
+      {:api_key => @api_key, :format => :xml}
     end
     
     def mashup(response)

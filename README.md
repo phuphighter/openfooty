@@ -32,7 +32,7 @@ Sign up for a Openfooty API key: [http://www.footytube.com/openfooty/signup.php]
 
     >> openfooty = Openfooty::Client.new
     >> fixtures = openfooty.league("getFixtures", :league_id => 72).openfooty.fixtures.match
-    >> fixtures.first.home_team.cdata
+    >> fixtures.first.home_team
     => "South Africa"
     
     >> stats = openfooty.match("getStats", :match_id => 781512).openfooty.match

@@ -7,7 +7,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "openfooty"
     gem.summary = %Q{Ruby wrapper for the Openfooty API}
-    gem.description = %Q{Ruby wrapper for the Openfooy API}
+    gem.description = %Q{Ruby wrapper for the Openfooty API}
     gem.email = "johnnyn@gmail.com"
     gem.homepage = "http://github.com/phuphighter/openfooty"
     gem.authors = ["Johnny Khai Nguyen"]

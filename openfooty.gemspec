@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{openfooty}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Johnny Khai Nguyen"]
   s.date = %q{2010-06-08}
-  s.description = %q{Ruby wrapper for the Openfooy API}
+  s.description = %q{Ruby wrapper for the Openfooty API}
   s.email = %q{johnnyn@gmail.com}
   s.extra_rdoc_files = [
     "README.md"
@@ -23,7 +23,14 @@ Gem::Specification.new do |s|
      "init.rb",
      "install.rb",
      "lib/openfooty.rb",
+     "lib/openfooty/client.rb",
+     "openfooty.gemspec",
+     "pkg/openfooty-0.1.0.gem",
      "tasks/openfooty_tasks.rake",
+     "test/fixtures/league_fixtures.json",
+     "test/fixtures/match_stats.json",
+     "test/fixtures/team_squad.json",
+     "test/helper.rb",
      "test/openfooty_test.rb",
      "uninstall.rb"
   ]
