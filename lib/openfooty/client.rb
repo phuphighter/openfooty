@@ -57,7 +57,7 @@ module Openfooty
     protected
   
     def default_options
-      {:api_key => @api_key, :format => :xml}
+      {:api_key => @api_key}
     end
     
     def mashup(response)

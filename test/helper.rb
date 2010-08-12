@@ -1,10 +1,12 @@
-require 'rubygems'
 require 'test/unit'
-require 'shoulda'
+require 'pathname'
+require 'rubygems'
 
-require 'redgreen'
+require 'shoulda'
 require 'matchy'
 require 'fakeweb'
+
+begin require 'redgreen'; rescue LoadError; end
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
