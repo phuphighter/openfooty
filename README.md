@@ -8,9 +8,8 @@ As a gem:
 
     sudo gem install openfooty
 
-As a plugin (in your Rails directory:
-
-    script/plugin install git://github.com/phuphighter/openfooty.git
+In your Gemfile:
+    gem 'openfooty', '0.3.2'
     
 ## Get a Openfooty API key
 
