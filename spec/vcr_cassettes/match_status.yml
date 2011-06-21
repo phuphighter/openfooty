@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://api.openfooty.org:80/1.0/match.getStats?api_key=9b3ce44cc6a223d3803f0c1350083816&match_id=781512
+    uri: http://api.openfooty.org:80/1.0/match.getStats?api_key=foobar&match_id=781512
     body: 
     headers: 
   response: !ruby/struct:VCR::Response 

@@ -20,20 +20,13 @@ Sign up for a Openfooty API key: [http://www.footytube.com/openfooty/signup.php]
 
 ### Configure
 
-    >> Openfooty.api_key = "your_api_key" or Openfooty::Client.new(:api_key => "your_api_key")
-    
-### or in an initializer
-
-    >> Openfooty.configure do |config|
-    >>   config.api_key = 'your_api_key'
-    >> end
+    >> Openfooty::Client.new(:api_key => "your_api_key")
     
 #### Examples
 
     >> openfooty = Openfooty::Client.new
-    >> fixtures = openfooty.league("getFixtures", :league_id => 72).openfooty.fixtures.match
-    >> fixtures.first.home_team
-    => "South Africa"
+    >> team_squad = @client.team("getSquad", :team_id => 2281).openfooty.players.player
+    => team_squad.first.should == 'B. Bradley'
     
     >> stats = openfooty.match("getStats", :match_id => 781512).openfooty.match
     >> stats.home_team.assists.assist.last.player_name
