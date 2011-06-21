@@ -1,0 +1,33 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.openfooty.org:80/1.0/team.getSquad?api_key=9b3ce44cc6a223d3803f0c1350083816&team_id=2281
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      content-type: 
+      - text/xml
+      date: 
+      - Tue, 21 Jun 2011 15:57:27 GMT
+      server: 
+      - nginx
+      set-cookie: 
+      - SESSID=462df9d8e74505d4ca631db2a87148eb; path=/; domain=.footytube.com
+      - lang=deleted; expires=Mon, 21-Jun-2010 15:57:20 GMT; path=/; domain=.footytube.com
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      transfer-encoding: 
+      - chunked
+    body: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\
+      <openfooty version=\"1.0\">\n <response status=\"ok\"/>\n <players team_id=\"2281\">\n  <player id=\"130156\" position=\"\">B. Bradley</player>\n  <player id=\"6912\" position=\"Goalkeeper\">B. Guzan</player>\n  <player id=\"629\" position=\"Goalkeeper\">M. Hahnemann</player>\n  <player id=\"632\" position=\"Goalkeeper\">T. Howard</player>\n  <player id=\"643\" position=\"Defender\">C. Bocanegra</player>\n  <player id=\"6906\" position=\"Defender\">J. Bornstein</player>\n  <player id=\"104666\" position=\"Defender\">S. Cherundolo</player>\n  <player id=\"7261\" position=\"Defender\">C. Goodson</player>\n  <player id=\"655\" position=\"Defender\">O. Onyewu</player>\n  <player id=\"2712\" position=\"Defender\">J. Spector</player>\n  <player id=\"76707\" position=\"Midfielder\">A. Bedoya</player>\n  <player id=\"2304\" position=\"Midfielder\">M. Bradley</player>\n  <player id=\"10049\" position=\"Midfielder\">R. Clark</player>\n  <player id=\"664\" position=\"Midfielder\">C. Dempsey</player>\n  <player id=\"666\" position=\"Attacker\">L. Donovan</player>\n  <player id=\"7452\" position=\"Midfielder\">M. Edu</player>\n  <player id=\"2008\" position=\"Midfielder\">B. Feilhaber</player>\n  <player id=\"7305\" position=\"Midfielder\">S. Holden</player>\n  <player id=\"6915\" position=\"Midfielder\">S. Klje\xC5\xA1tan</player>\n  <player id=\"14359\" position=\"Midfielder\">J. Torres</player>\n  <player id=\"7422\" position=\"Attacker\">J. Altidore</player>\n  <player id=\"7445\" position=\"Attacker\">E. Buddle</player>\n  <player id=\"7345\" position=\"Attacker\">R. Findley</player>\n  <player id=\"6937\" position=\"Attacker\">H. G\xC3\xB3mez</player>\n  <player id=\"73686\" position=\"Defender\">O. Gonzalez</player>\n  <player id=\"38367\" position=\"Goalkeeper\">D. Yelldell</player>\n  <player id=\"90118\" position=\"Defender\">E. Lichaj</player>\n  <player id=\"124014\" position=\"Defender\">T. Ream</player>\n  <player id=\"75700\" position=\"Midfielder\">M. Diskerud</player>\n  <player id=\"1801\" position=\"Midfielder\">J. Jones</player>\n  <player id=\"103168\" position=\"Attacker\">J.  Agudelo</player>\n  <player id=\"57720\" position=\"Attacker\">T. Chandler</player>\n  <player id=\"2541\" position=\"Defender\">J. DeMerit</player>\n </players>\n\
+      </openfooty>\n"
+    http_version: "1.1"

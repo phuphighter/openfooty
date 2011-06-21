@@ -1,0 +1,36 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.openfooty.org:80/1.0/league.getFixtures?api_key=9b3ce44cc6a223d3803f0c1350083816&league_id=72
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      content-type: 
+      - text/xml
+      date: 
+      - Tue, 21 Jun 2011 15:57:21 GMT
+      server: 
+      - nginx
+      set-cookie: 
+      - SESSID=a9df07d526fa56ec44b6a327921705e9; path=/; domain=.footytube.com
+      - lang=deleted; expires=Mon, 21-Jun-2010 15:57:19 GMT; path=/; domain=.footytube.com
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      transfer-encoding: 
+      - chunked
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <openfooty version="1.0">
+       <response status="empty"/>
+      </openfooty>
+
+    http_version: "1.1"

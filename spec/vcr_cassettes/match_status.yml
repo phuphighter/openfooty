@@ -1,0 +1,95 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.openfooty.org:80/1.0/match.getStats?api_key=9b3ce44cc6a223d3803f0c1350083816&match_id=781512
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      expires: 
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      content-type: 
+      - text/xml
+      date: 
+      - Tue, 21 Jun 2011 15:57:27 GMT
+      server: 
+      - nginx
+      set-cookie: 
+      - SESSID=1c6960ea466506e7893966f6342c9f30; path=/; domain=.footytube.com
+      - lang=deleted; expires=Mon, 21-Jun-2010 15:57:26 GMT; path=/; domain=.footytube.com
+      cache-control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      pragma: 
+      - no-cache
+      transfer-encoding: 
+      - chunked
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <openfooty version="1.0">
+       <match>
+        <ht_score>0-1</ht_score>
+        <score>2-1</score>
+        <winner>674</winner>
+        <date>2010-04-25 14:00:00</date>
+        <status>Played</status>
+        <home_team id="674">
+         <name>Everton</name>
+         <lineup>
+          <player id="632">T. Howard</player>
+          <player id="2846">S. Distin</player>
+          <player id="2868">T. Hibbert</player>
+          <player id="2600">P. Jagielka</player>
+          <player id="2672">L. Baines</player>
+          <player id="2876">M. Arteta</player>
+          <player id="6472">D. Bilyaletdinov</player>
+          <player id="1960">S. Pienaar</player>
+          <player id="2874">P. Neville</player>
+          <player id="709">T. Cahill</player>
+          <player id="2839">A. Yakubu</player>
+          <substitution player_id_off="6472" player_id_on="2886">V. Anichebe for D. Bilyaletdinov (45)</substitution>
+          <substitution player_id_off="2874" player_id_on="552">L. Saha for P. Neville (60)</substitution>
+          <substitution player_id_off="2839" player_id_on="55559">J. Baxter for A. Yakubu (87)</substitution>
+         </lineup>
+         <goals count="2">
+          <goal type="owngoal" time="49" player_id="79474" player_name="C. Smalling"/>
+          <goal type="penalty" time="90" player_id="2876" player_name="M. Arteta"/>
+         </goals>
+         <assists count="2">
+          <assist time="49" player_id="2886" player_name="V. Anichebe"/>
+          <assist time="90" player_id="709" player_name="T. Cahill"/>
+         </assists>
+         <cards count="0"/>
+        </home_team>
+        <away_team id="667">
+         <name>Fulham</name>
+         <lineup>
+          <player id="702">M. Schwarzer</player>
+          <player id="15481">C. Baird</player>
+          <player id="79474">C. Smalling</player>
+          <player id="611">J. Paintsil</player>
+          <player id="2568">N. Shorey</player>
+          <player id="21660">K. Dikgacoi</player>
+          <player id="664">C. Dempsey</player>
+          <player id="15429">J. Greening</player>
+          <player id="7773">B. Riise</player>
+          <player id="2288">E. Nevland</player>
+          <player id="18418">S. Okaka Chuka</player>
+          <substitution player_id_off="2288" player_id_on="6275">D. Elm for E. Nevland (78)</substitution>
+          <substitution player_id_off="18418" player_id_on="7905">F. Stoor for S. Okaka Chuka (89)</substitution>
+         </lineup>
+         <goals count="1">
+          <goal type="normal" time="36" player_id="2288" player_name="E. Nevland"/>
+         </goals>
+         <assists count="0"/>
+         <cards count="1">
+          <card type="yellow" time="39" player_id="611" player_name="J. Paintsil"/>
+         </cards>
+        </away_team>
+       </match>
+      </openfooty>
+
+    http_version: "1.1"
