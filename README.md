@@ -8,12 +8,13 @@ As a gem:
 
     sudo gem install openfooty
 
-In your Gemfile:
-    gem 'openfooty', '0.3.2'
+In your Gemfile:   
+gem 'openfooty', '0.3.2'
     
 ## Get a Openfooty API key
 
-Sign up for a Openfooty API key: [http://www.footytube.com/openfooty/signup.php](http://www.footytube.com/openfooty/signup.php)
+Sign up for a Openfooty API key:   
+[http://www.footytube.com/openfooty/signup.php](http://www.footytube.com/openfooty/signup.php)
     
 ## Usage
 
